@@ -19,6 +19,7 @@
   "dependencies": {
     "autolinker": "^1.6.0",
     "bulma": "0.6.1",
+    "cross-env": "^5.2.0",
     "dayjs": "^1.8.2",
     "firebase": "^4.8.1",
     "htmlspecialchars": "^1.0.5",

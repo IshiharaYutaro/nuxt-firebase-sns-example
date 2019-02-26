@@ -1,5 +1,6 @@
 const webpack = require('webpack')
-
+const environment = process.env.NODE_ENV || 'develop';
+const envSet = require(`./env/${environment}.js`)
 export default {
   srcDir: 'app',
   /*
@@ -28,14 +29,7 @@ export default {
   /*
   ** Build configuration
   */
-  env: {
-    APIKEY: process.env.APIKEY,
-    AUTHDOMAIN: process.env.AUTHDOMAIN,
-    DATABASEURL: process.env.DATABASEURL,
-    PROJECTID: process.env.PROJECTID,
-    STORAGEBUCKET: process.env.STORAGEBUCKET,
-    MESSAGINGSENDERID: process.env.MESSAGINGSENDERID
-  },
+  env: envSet,
   build: {
     publicPath: '/assets/',
   }
